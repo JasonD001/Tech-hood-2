@@ -1,0 +1,439 @@
+
+
+@font-face {
+    font-family: 'Lato';
+    src: url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+}
+
+
+#main {
+    overflow: auto; /* Allows scrolling if content overflows */
+    min-height: 100vh; /* Ensures #main takes at least the full viewport height */
+}
+
+/* Each section should take at least the full viewport height */
+section {
+    min-height: 100vh; /* Ensures each section takes at least the full viewport height */
+    box-sizing: border-box; /* Ensure padding/border doesn't affect height */
+}
+
+/* Specific adjustments for visibility issues */
+#page1, #page2, #page3, #page4, #page5 {
+    position: relative; /* Ensure sections are positioned correctly */
+    overflow: visible; /* Ensure content is not clipped */
+}
+
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700; /* Bold weight */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif; /* Ensure fallback fonts */
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: grey; /* Light grey background color */
+    position: relative;
+}
+
+#cursor{
+    height: 7vw;
+    width: 7vw;
+    background-color: #FF5F38;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+#cursor h5{
+    font-size: 1vw;
+}
+
+#page1 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    position: absolute;
+}
+
+#page1-content {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2vw 3vw; /* Padding for the navigation */
+}
+
+nav h3 {
+    font-size: 1.4vw; /* Font size for heading */
+    font-weight: 700; /* Bold weight */
+}
+
+nav h4 {
+    font-size: 1.4vw; /* Font size for heading */
+    font-weight: 400; /* Regular weight */
+}
+
+#page1-content h1{
+    font-family: 'Lato', sans-serif;
+    /* font-weight: 100; */
+    font-size: 10vw;
+    line-height: 15vw;
+
+}
+
+#page1-content h1 span{
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+
+
+
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    padding: 0rem; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 95%; /* Adjust max-width as needed */
+}
+
+.page2-header h3 {
+    font-family: sans-serif;
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #e74c26;
+}
+
+.page2-header .left {
+}
+
+.page2-header .right {
+}
+
+hr.divider {
+    width: 100%;
+    max-width: 95%; /* Adjust max-width as needed */
+    border: none;
+    border-top: 2px solid rgba(85, 82, 82, 0.731); /* Color of the line */
+    margin: 1rem 0; /* Space around the line */
+}
+
+.description {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem; /* Adjust font size as needed */
+    text-align: center;
+    max-width: 80%; /* Adjust max-width as needed */
+    color: black ;
+}
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 3vw;
+    z-index: 1; /* Ensure it is below #page4 */
+}
+
+#page3-top{
+    /* background-color: antiquewhite; */
+    text-align: center;
+}
+
+#page3-top h4{
+    margin-bottom: 1vw;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
+#page3-top h4 span{
+    font-size: 0.7vw;
+    background-color: black;
+    color: white;
+    padding: 0.4vw 0.7vw;
+    border-radius: 0.5vw; 
+
+}
+
+#page3-top h2{
+    font-size: 3.5vw;
+}
+
+#page3-elements {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 6vw;
+}
+
+#page3-elements .box {
+    height: 100%;
+    width: 33%;
+    position: relative;
+
+}
+
+#page3-elements .box video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    padding: 0.5vw;
+}
+
+#page3-elements .box img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 0.5vw;
+    object-position: center;
+    transition: all linear 0.8s;
+
+}
+
+#page3-elements .box:hover img{
+    padding: 0.5vw;
+    opacity: 0;
+}
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+    padding: 0rem; /* Adjust padding as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.page4-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 95%; /* Adjust max-width as needed */
+}
+
+.page4-header h3 {
+    font-family: sans-serif;
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: #e74c26;
+}
+
+.page4-header .left {
+}
+
+.page4-header .right {
+}
+
+hr.divider {
+    width: 100%;
+    max-width: 95%; /* Adjust max-width as needed */
+    border: none;
+    border-top: 2px solid rgba(85, 82, 82, 0.731); /* Color of the line */
+    margin: 1rem 0; /* Space around the line */
+}
+
+.description {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem; /* Adjust font size as needed */
+    text-align: center;
+    max-width: 80%; /* Adjust max-width as needed */
+    color: black ;
+}
+
+
+#page5{
+    height: 100vh;
+    width: 100%;
+    padding: 4vw 0;
+    position: relative;
+}
+
+#page5 h1{
+    font-size: 10vw;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    border-bottom: 1px solid black;
+    width: 96%;
+    margin-left: 2%;
+
+}
+
+#swiperdiv{
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    margin-top: -2%;
+}
+
+
+
+
+.swiper {
+    width: 130%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 400px;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 19%;
+    /* height: 100%; */
+    object-fit: cover;
+  }
+
+#loader{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 10px;
+}
+
+#loader h3{
+    font-size: 2vw;
+    font-weight: 100;
+
+
+}
+
+footer {
+    background-color: #f8f9fa; /* Just for testing */
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa; /* Light background color */
+    color: #343a40; /* Dark text color for readability */
+    padding: 2rem 0; /* Padding for the footer */
+}
+
+footer .container {
+    max-width: 1140px; /* Container width for responsiveness */
+    margin: 0 auto; /* Center the container */
+}
+
+footer h5 {
+    font-size: 1.25rem; /* Font size for section titles */
+    margin-bottom: 1rem; /* Space below section titles */
+    color: #343a40; /* Dark text color for titles */
+}
+
+footer p, footer ul li p {
+    font-size: 0.875rem; /* Font size for paragraph text */
+    margin-bottom: 0.5rem; /* Space below paragraph text */
+}
+
+footer a {
+    color: #007bff; /* Primary link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+footer ul {
+    padding-left: 0; /* Remove padding from list */
+}
+
+footer ul li {
+    margin-bottom: 0.5rem; /* Space below list items */
+}
+
+footer .text-center {
+    background-color: rgba(248, 249, 250, 0.8); /* Semi-transparent background color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1rem; /* Padding inside the footer bottom section */
+}
+
+footer .text-center hr {
+    border: 0; /* Remove default border */
+    border-top: 1px solid #dee2e6; /* Add top border with color */
+    margin: 1rem auto; /* Center the horizontal rule */
+    width: 50%; /* Set width to 50% */
+}
+
+footer .text-center p, footer .text-center small {
+    color: #6c757d; /* Color for footer text */
+    font-size: 0.9rem; /* Font size for small text */
+}
+
+footer .text-center a {
+    color: #007bff; /* Primary link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer .text-center a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+footer .text-center span {
+    color: #dc3545; /* Color for heart icon */
+}
+
+html {
+    scroll-behavior: smooth;
+}
